@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Character = () => {
-  return <div>Character</div>;
-};
-
-export default Character;
+export default function Character({ head }) {
+  return (
+    <div>
+      <div className="character">
+        <img className="head" src={`./${head}-head.png`}></img>
+      </div>
+    </div>
+  );
+}
