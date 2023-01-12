@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Character from './components/Character/Character.js';
+import Picker from './components/Picker.js';
+import Stats from './components/Stats.js';
+import background from './Media';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+  return (
+    <div className="App" style={{ backgroundImage = `url(${background})`}}>
+
+  </div>
+);
+}
