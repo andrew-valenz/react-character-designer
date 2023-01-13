@@ -1,7 +1,19 @@
-import React from 'react';
+// import React from 'react';
 
-const Counter = () => {
-  return <div>Counter</div>;
-};
+// export default function Counter() {
+//   const [count, setCount] = useState(0);
 
-export default Counter;
+//   const increment = () => {
+//     setCount((count) => {
+//       return count + 1;
+//     });
+//   };
+//   return (
+//     <>
+//       <p onChange={increment}>
+//         You have changed the head {count} times, you have changed the shirt {count} times, you have
+//         changed the bottom {count} times. And who can forget your characters classic catchphrase!
+//       </p>
+//     </>
+//   );
+// }
