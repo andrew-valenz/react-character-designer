@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Picker = () => {
-  return <div>Picker</div>;
+const Counter = () => {
+  return <div>Counter</div>;
 };
 
-export default Picker;
+export default Counter;
