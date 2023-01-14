@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Controls from './components/Controls.js';
-// import Counter from './components/Counter.js';
+import Display from './components/Display.js';
 import Character from './components/Character/Character.js';
 import bg from './Media/bg.backgroundlego.jpeg';
 
@@ -12,8 +12,8 @@ function App() {
   const [headCount, setHeadCount] = useState(0);
   const [middleCount, setMiddleCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
-
-  // const [input, setInput] = useState('');
+  const [input, setInput] = useState([]);
+  const [updateInput, setUpdate] = useState('');
 
   const handleChange = (type, value) => {
     if (type === 'head') {
@@ -30,6 +30,11 @@ function App() {
     }
   };
 
+  const handleSubmit = () => {
+    setUpdate(input);
+    setInput((currentState) => [...currentState, updateInput]);
+  };
+
   return (
     <div className="App" style={{ backgroundImage: `url(${bg})` }}>
       <main>
@@ -44,12 +49,17 @@ function App() {
           </div>
           <div>
             <p>
-              {' '}
               You have changed the head {headCount} times,you have changed the shirt {middleCount}{' '}
               times, you have changed the bottom {bottomCount} times. And who can forget your
-              characters classic catchphrase!{' '}
+              characters classic catchphrase!
             </p>
+            <input className="Catchphrase" onChange={(e) => setUpdate(e.target.value)}></input>
+            <button className="btn" onClick={handleSubmit}>
+              {' '}
+              SUBMIT{' '}
+            </button>
           </div>
+          <Display input={input} />
         </section>
       </main>
     </div>

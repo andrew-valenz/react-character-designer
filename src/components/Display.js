@@ -1,7 +1,17 @@
 import React from 'react';
 
-const Stats = () => {
-  return <div>Stats</div>;
+const Display = ({ input }) => {
+  return (
+    <div>
+      <ul>
+        {input.map((phrase) => (
+          <li key={phrase} value={phrase}>
+            {phrase}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-export default Stats;
+export default Display;
